@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Make my cake</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+<link rel="preconnect" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;500;700&display=swap" rel="stylesheet"/>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+    
+        let width = window.innerWidth;
+        
+        let aboutWidth = $("#about").offset().top
+        let asortimentWidth = $("#asortiment").offset().top
+        let photoWidth = $("#photo").offset().top
+        let contactsWidth = $("#contacts").offset().top
+
+        
+        $('.aboutButton').on('click', function () {
+            window.scrollTo({
+                top: aboutWidth,
+                behavior: "smooth",
+            });
+        });
+
+        $('.asortimentButton').on('click', function () {
+            window.scrollTo({
+                top: asortimentWidth,
+                behavior: "smooth",
+            });
+        });
+
+        $('.photoButton').on('click', function () {
+            window.scrollTo({
+                top: photoWidth,
+                behavior: "smooth",
+            });
+        });
+
+        $('.contactsButton').on('click', function () {
+            window.scrollTo({
+                top: contactsWidth,
+                behavior: "smooth",
+            });
+        });
+
+
+        if (width <= 1200) {
+            $(".navbar").show()
+            $(".navbar-pc").hide()
+        } else {
+            $(".navbar").hide()
+            $(".navbar-pc").show()
+        }
+
+        $('.first-button').on('click', function () {
+            $('.animated-icon1').toggleClass('open');
+        });
+
+});
+</script>
+</head>
+
+<body>
+
+<header class="header"> 
+    <!--Navbar-->
+<nav style="display: none;" class="navbar navbar-light amber lighten-4 mb-4">
+
+    <!-- Navbar brand -->
+    <img 
+    class="icon" 
+    src="images/icon.png"
+    alt="logo"
+    />  
+    <!-- Collapse button -->
+    <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
+      aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon1"><span></span><span></span><span></span></div>
+    </button>
+  
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent20">
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto d-flex justify-content-center">
+        <li class="nav-item active d-flex justify-content-center">
+            <a class="li_nav" href="#">Головна</a>
+        </li>
+        <li class="nav-item d-flex justify-content-center">
+            <a class="li_nav aboutButton" href="#">Про нас</a>
+        </li>
+        <li class="nav-item d-flex justify-content-center">
+            <a class="li_nav asortimentButton" href="#">Асортимент</a>
+        </li>
+        <li class="nav-item d-flex justify-content-center">
+            <a class="li_nav photoButton" href="#">Фото</a>
+        </li>
+        <li class="nav-item d-flex justify-content-center">
+            <a class="li_nav contactsButton" href="#">Контакти</a>
+        </li>
+      </ul>
+      <!-- Links -->
+  
+    </div>
+    <!-- Collapsible content -->
+  
+  </nav>
+  <!--/.Navbar-->
+  
+  
+<div class="container navbar-pc"> 
+    <div class="row">
+        <div class="col-3">
+            <img 
+                class="icon" 
+                src="images/icon.png"
+                alt="logo"
+                />
+        </div>
+        <div class="col-9">
+            <nav>
+                <ul class="firstline d-flex justify-content-center">
+                    <li><a class="li_nav" href="#">Головна</a></li>
+                    <li><a class="li_nav aboutButton" href="#">Про нас</a></li>
+                    <li><a class="li_nav asortimentButton" href="#">Асортимент</a></li>
+                    <li><a class="li_nav photoButton" href="#">Фото</a></li>
+                    <li><a class="li_nav contactsButton" href="#">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+</header>
+<main>
+    <div class="back"></div>
+    <div class="container">
+        <section class="backs d-flex justify-content-end align-items-center">
+            <div>
+             <h1>make my cake</h1>
+             <h4 class="rect">твоя солодка кондитерська</h4>
+            </div>
+         </section>
+
+         
+    </div>
+     <div class="container-fluid pagetwo">
+        <div class="container">
+            <section>
+                <div id="about" class="row d-flex justify-content-between firline">
+                    <div style="text-align: center; padding-left: 30px;" class="col-xl-4">
+                        <img class="img-fluid" src="images/pagetwo.jpg" alt="Наша пекарня виглядає так">
+                    </div>
+    
+                    <div style="text-align: center; padding-right: 30px;" class="col-xl-4 d-flex align-items-center">
+                        <div>
+                            <br>
+                            <h2 class="rect2">про нас</h2>
+                            
+                            <p>
+                                <ul class="opus">
+                                    <li>make my cake - майстерня-кондитерська, в якій ви можете</li>
+                                    <br>
+                                    <li>*скуштувати тістечка,макарони та багато-багато смачненького</li>
+                                    <br>
+                                    <li>*замовити торктики на свята</li>
+                                    <br>
+                                    <li>*зробити естетичні фото своїх десертів</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            </section>
+    
+         </div>
+     </div>
+    
+     <!-- Пішла основна частина нарешті -->
+
+<section id="asortiment" style="background: #FDF3F3;">
+    <div class="container">   
+        <br>
+        <br>
+        <br>
+    <h2 style="text-align: center;" class="rect3 col-xl-4 d-flex align-items-center">асортимент</h2>
+    <h4 style="text-align: center;" class="undertexto">спробуйте кожну позицію</h4>
+   <br>
+   </div>
+   <div class="prices-table">
+
+        <div class="table-item">
+            <h3>макарони</h3>
+            <p class="price">100 грн </p>
+            <p class="sale">десерт з мигдалевого борошна</p>
+            <p class="sale">чотири різні смаки</p>
+            <p class="sale">незабутня насолода</p>
+            <img class="img-fluid" src="images/macaron.jpg">
+            <div class="price-btn">СПРОБУЙТЕ!</div>
+        </div>
+
+        <div class="table-item">
+            <h3>тістечка</h3>
+            <p class="price">300 грн </p>
+            <p class="sale">бісквітні та шоколадні коржі</p>
+            <p class="sale">карамельний та масляний крем</p>
+            <p class="sale">солодка бомба</p>
+            <img class="img-fluid" src="images/cakes.jpg">
+            <div class="price-btn">СПРОБУЙТЕ!</div>
+        </div>
+
+        <div class="table-item">
+            <h3>на замовлення</h3>
+            <p class="price">1500 грн </p>
+            <p class="sale">коржі та крем на вибір</p>
+            <p class="sale">дизайн згідно бажання</p>
+            <p class="sale">на свято чи просто так</p>
+            <img class="img-fluid" src="images/order.jpg">
+            <div class="price-btn">СПРОБУЙТЕ!</div>
+        </div>
+    </div>
+</section>
+    
+<section style="background: #F7A3DF;">
+    <div class="container">
+                <br>
+                <br>
+                <br>
+    <h2 style="text-align: center;" class="rect3 col-xl-4 d-flex align-items-center">макарони</h2>
+    <h4 style="text-align:center;" class="undertexto" >вибухове поєднання смаків</h4>
+    <br>
+    <div class="row">
+        <div class="col-md-3 d-flex justify-content-center">
+            <div>
+                <img class="img-fluid" src="images/fist.jpg">
+                <p class="undertext">фісташка</p>
+            </div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-center">
+           <div>
+                <img class="img-fluid" src="images/caram.jpg">
+                <p class="undertext">солона карамель</p>
+           </div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-center">
+            <div>
+                <img class="img-fluid" src="images/lav.jpg">
+                <p class="undertext">лаванда</p>
+            </div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-center">
+            <div>
+                <img class="img-fluid" src="images/pol.jpg">
+                <p class="undertext">полуниця-маскарпоне</p>
+            </div>
+        </div>
+                <br>
+                <br>
+                <br>
+                <br>
+    </div>
+    <br>
+    <br>
+    </div>
+</section>
+
+<section style="background: #EF51B8;">
+    <div class="container">
+                <br>
+                <br>
+                <br>
+    <h2 style="text-align: center;" class="rect3 col-xl-4 d-flex align-items-center">тістечка</h2>
+    <br>
+    <h4 style="text-align:center;" class="undertexto">маленькі копії тортиків, але такі ж смачні</h4>
+    <br>
+    <div class="row">
+        <div class="col-md-3 d-flex justify-content-center">
+            <div>
+                <img class="img-fluid" src="images/banan.jpg">
+                <p class="undertext">банановий торт</p>
+            </div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-center">
+            <div>
+                <img class="img-fluid" src="images/mork.jpg">
+                <p class="undertext">морквяно-мигдалевий</p>
+            </div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-center">
+            <div>
+                <img class="img-fluid" src="images/mal.jpg">
+                <p class="undertext">малиновий оксамит</p>
+            </div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-center">
+            <div>
+                <img class="img-fluid" src="images/shoko.jpg">
+                <p class="undertext">шоколадно-бурбоновий</p>
+            </div>
+        </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                
+    </div>
+    <br>
+    <br>
+    </div>
+</section>
+
+<section id="photo">
+    <div class="container">
+                <br>
+                <br>
+                <br>
+        <p style="text-align: center;" class="rect3 col-xl-4 d-flex align-items-center">фото</p>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-4 d-flex justify-content-center">
+                <img class="img-fluid" src="images/photoo.jpg">
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+                <img class="img-fluid" src="images/photon.jpg">
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+                <img class="img-fluid" src="images/photot.jpg">
+            </div>
+        </div>
+                <br>
+                <br>
+    </div>
+
+</section>
+
+<section>
+    <video muted autoplay loop preload="metadata" src="videos/cake.mp4">
+    </video>
+    </div>
+</section>
+
+<section style="background-color: #F7A3DF;">
+    <div class="container78">
+        <form action="#" method="post" class="feedback-form" style="background-color: white;">
+          <h2 style="color: black; text-align: center;">Заповніть форму</h2>
+          <fieldset>
+            <div class="form-group">
+              <label for="name" style="color: black;">Ім'я:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone" style="color: black;">Телефон:</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="email" style="color: black;">Електронна пошта:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="cake" style="color: black;">Яким ви хочете бачити свій торт:</label>
+              <input type="text" id="cake" name="cake" required>
+            </div>
+            <button type="submit" class="submit-btn">Хочу торт!</button>
+            <p id="thankYouMessage" class="hidden">Невдовзі ми з вами зв'яжемось!</p>
+          </fieldset>
+        </form>
+      </div>
+    
+      <script>
+        document.querySelector('.submit-btn').addEventListener('click', function(event) {
+          event.preventDefault();
+          var thankYouMessage = document.getElementById("thankYouMessage");
+          thankYouMessage.classList.remove("hidden");
+          event.target.style.backgroundColor = "#D936A0";
+        });
+      </script>
+</section>
+
+
+</main>
+
+<!-- Footer -->
+<footer id="contacts" class="text-center text-lg-start bg-light text-muted">
+    
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 d-flex justify-content-center">
+            <div>
+                <br>
+                <br>
+                <br>
+                <p><i class="bi bi-instagram"></i> @makemycake</p>
+            <p>
+                <i class="bi bi-telephone"></i>
+                +380 9618 799 41
+            </p>
+            <p><i class="bi bi-telegram"></i> @make_my_cake_lviv</p>
+            <p><i class="bi bi-map-fill"></i> м. львів, вул. Зелена, 42</p>
+            </div>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <img src="images/icon.png" alt="">
+            <h2>make my cake</h2>
+          </div>
+          <!-- Grid column -->
+  
+        
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 d-flex justify-content-center">
+            <!-- Links -->
+            <ul style="padding-right: 35px;" class="ul_footer">
+                <br>
+                <br>
+                <br>
+                <li><a class="li_nav_footer" href="#">Головна</a></li>
+                <li><a class="li_nav_footer aboutButton" href="#">Про нас</a></li>
+                <li><a class="li_nav_footer asortimentButton" href="#">Асортимент</a></li>
+                <li><a class="li_nav_footer photoButton" href="#">Фото</a></li>
+                <li><a class="li_nav_footer contactsButton" href="#">Контакти</a></li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    
+  </footer>
+  <!-- Footer -->
+
+</body>
